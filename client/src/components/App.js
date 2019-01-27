@@ -33,8 +33,6 @@ class App extends React.Component {
         </div>
       );
     } else {
-      console.log("good UI");
-
       return (
         <div className="ui container" style={{ paddingTop: "10px" }}>
           <div className="ui medium header centered">league stats</div>
