@@ -12,6 +12,9 @@ app.get("/", (req, res) => {
   res.send({ hello: "world" });
 });
 
+// Serve static content to be accessed by /img/path/to/file
+app.use(express.static("public"));
+
 // Production Setup to serve React front end when deployed to heroku
 if (process.env.NODE_ENV === "production") {
   // Serve React build statically
