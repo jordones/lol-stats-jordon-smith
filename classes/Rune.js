@@ -35,9 +35,11 @@ class Rune extends Data {
     });
 
     if (perkId === undefined) {
-      return RuneJson[runeId].icon;
+      return "img/" + RuneJson[runeId].icon;
     } else {
-      return Rune.findPrimaryRuneIcon(Rune.findPrimaryRune(runeId, perkId));
+      return (
+        "img/" + Rune.findPrimaryRuneIcon(Rune.findPrimaryRune(runeId, perkId))
+      );
     }
   }
 
