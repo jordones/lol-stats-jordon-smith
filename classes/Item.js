@@ -9,11 +9,13 @@ class Item extends Data {
 
   // Utility method to retrieve a Items name from the parsed JSON
   static findNameById(id) {
+    if (id === 0) return "";
     return ItemJson.data[id].name;
   }
 
   // Utility method to build a Items image url from the parsed JSON
   static findImageurlById(id) {
+    if (id === 0) return "";
     return "img/item/" + ItemJson.data[id].image.full;
   }
 }
