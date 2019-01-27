@@ -195,9 +195,9 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
 // Create a sample root route
-app.get("/api/matches", async (req, res) => {
+app.post("/api/matches", async (req, res) => {
   try {
-    var apiData = await executeQuery("best chopsticks");
+    var apiData = await executeQuery(req.body.summonerName);
     res.send(JSON.stringify(apiData));
   } catch (err) {
     res.send(JSON.stringify(err));
