@@ -3,6 +3,11 @@ const bodyParser = require("body-parser");
 
 const app = express();
 
+const Champion = require("./classes/Champion");
+const Rune = require("./classes/Rune");
+const Spell = require("./classes/Spell");
+const Item = require("./classes/Item");
+
 // Enable request body JSON parsing middleware
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
