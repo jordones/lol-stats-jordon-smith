@@ -8,7 +8,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
 // Create a sample root route
-app.get("/", (req, res) => {
+app.get("/api/matches", (req, res) => {
   res.send({ hello: "world" });
 });
 
